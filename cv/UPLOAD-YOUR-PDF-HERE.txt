@@ -1,0 +1,9 @@
+Upload your PDF CV in this folder using this exact filename:
+
+Vuyo-Makasana-CV.pdf
+
+Final path:
+cv/Vuyo-Makasana-CV.pdf
+
+The portfolio already contains Download CV buttons that point to this file.
+If the PDF is not uploaded yet, the site will open cv.html instead.

@@ -19,6 +19,24 @@ if (hamburger && navLinks) {
   });
 }
 
+const cvDownloadLinks = document.querySelectorAll("[data-cv-download]");
+
+if (cvDownloadLinks.length) {
+  fetch("cv/Vuyo-Makasana-CV.pdf", { method: "HEAD" })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("CV PDF not found");
+      }
+    })
+    .catch(() => {
+      cvDownloadLinks.forEach(link => {
+        link.removeAttribute("download");
+        link.setAttribute("href", "cv.html");
+        link.setAttribute("title", "PDF not uploaded yet. Opening the online CV instead.");
+      });
+    });
+}
+
 
 
 
